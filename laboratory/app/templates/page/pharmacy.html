@@ -1,0 +1,24 @@
+<div class="col">
+    <h1 class="lead">{{ pharmacy.pharmacy_name }}</h1>
+</div>
+<div class="col">
+    <h1 class="lead">{{ pharmacy.patients_full_name }}</h1>
+</div>
+<div class="col">
+    <h1 class="lead">{{ pharmacy.name_of_medicine }}</h1>
+</div>
+<div class="col">
+    <h1 class="lead">{{ pharmacy.type_of_medicine }}</h1>
+</div>
+<div class="col">
+    <p class="lead">{{ pharmacy.price_of_medicine }}</p>
+</div>
+<div class="col">
+    <p class="lead">{{ pharmacy.county_of_origin }}</p>
+</div>
+<div class="col">
+    <p class="lead">{{ pharmacy.date_of_sale }}</p>
+</div>
+<div class="col">
+    <a href="{{ url_for('entity.remove_block', pharmacy_name=pharmacy.pharmacy_name) }}" class="btn btn-danger">Удалить</a>
+</div>

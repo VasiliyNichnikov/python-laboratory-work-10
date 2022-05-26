@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block content %}
+            {% if pharmacies %}
+
+                <div class="row p-3 mb-2 bg-info text-dark">
+                    <div class="col">
+                        <h1 class="lead">Название аптеки</h1>
+                    </div>
+                    <div class="col">
+                        <h1 class="lead">Полное имя пациента</h1>
+                    </div>
+                    <div class="col">
+                        <h1 class="lead">Название препарата</h1>
+                    </div>
+                    <div class="col">
+                        <h1 class="lead">Тип препарата</h1>
+                    </div>
+                    <div class="col">
+                        <p class="lead">Цена</p>
+                    </div>
+                    <div class="col">
+                        <p class="lead">Страна производителя</p>
+                    </div>
+                    <div class="col">
+                        <p class="lead">Дата продажи</p>
+                    </div>
+                    <div class="col">
+                        <p class="lead">Действия</p>
+                    </div>
+                </div>
+
+                {% for pharmacy in pharmacies %}
+                    <div class="row p-3 mb-2 bg-info text-dark">
+                        {% include "page/pharmacy.html" %}
+                    </div>
+                {% endfor %}
+            {% else %}
+                <p>Не нашел данные</p>
+            {% endif %}
+{% endblock %}
